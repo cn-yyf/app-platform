@@ -2,7 +2,7 @@ package app.platform.web.controller.system;
 
 import java.util.List;
 import org.apache.commons.lang3.ArrayUtils;
-import org.springframework.beans.factory.annotation.Autowired;
+import jakarta.annotation.Resource;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -31,7 +31,7 @@ import app.platform.system.service.ISysDeptService;
 @RequestMapping("/system/dept")
 public class SysDeptController extends BaseController
 {
-    @Autowired
+    @Resource
     private ISysDeptService deptService;
 
     /**

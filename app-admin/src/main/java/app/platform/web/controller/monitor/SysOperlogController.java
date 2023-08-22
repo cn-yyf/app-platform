@@ -2,7 +2,7 @@ package app.platform.web.controller.monitor;
 
 import java.util.List;
 import jakarta.servlet.http.HttpServletResponse;
-import org.springframework.beans.factory.annotation.Autowired;
+import jakarta.annotation.Resource;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -28,7 +28,7 @@ import app.platform.system.service.ISysOperLogService;
 @RequestMapping("/monitor/operlog")
 public class SysOperlogController extends BaseController
 {
-    @Autowired
+    @Resource
     private ISysOperLogService operLogService;
 
     @PreAuthorize("@ss.hasPermi('monitor:operlog:list')")

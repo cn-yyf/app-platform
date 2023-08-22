@@ -1,7 +1,7 @@
 package app.platform.system.service.impl;
 
 import java.util.List;
-import org.springframework.beans.factory.annotation.Autowired;
+import jakarta.annotation.Resource;
 import org.springframework.stereotype.Service;
 import app.platform.system.domain.SysOperLog;
 import app.platform.system.mapper.SysOperLogMapper;
@@ -15,7 +15,7 @@ import app.platform.system.service.ISysOperLogService;
 @Service
 public class SysOperLogServiceImpl implements ISysOperLogService
 {
-    @Autowired
+    @Resource
     private SysOperLogMapper operLogMapper;
 
     /**

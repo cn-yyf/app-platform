@@ -6,7 +6,7 @@ import org.quartz.JobDataMap;
 import org.quartz.JobKey;
 import org.quartz.Scheduler;
 import org.quartz.SchedulerException;
-import org.springframework.beans.factory.annotation.Autowired;
+import jakarta.annotation.Resource;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import app.platform.common.constant.ScheduleConstants;
@@ -25,10 +25,10 @@ import app.platform.quartz.util.ScheduleUtils;
 @Service
 public class SysJobServiceImpl implements ISysJobService
 {
-    @Autowired
+    @Resource
     private Scheduler scheduler;
 
-    @Autowired
+    @Resource
     private SysJobMapper jobMapper;
 
     /**

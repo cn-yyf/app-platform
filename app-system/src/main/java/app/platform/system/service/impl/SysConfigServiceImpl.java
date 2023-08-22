@@ -3,7 +3,7 @@ package app.platform.system.service.impl;
 import java.util.Collection;
 import java.util.List;
 import jakarta.annotation.PostConstruct;
-import org.springframework.beans.factory.annotation.Autowired;
+import jakarta.annotation.Resource;
 import org.springframework.stereotype.Service;
 import app.platform.common.annotation.DataSource;
 import app.platform.common.constant.CacheConstants;
@@ -25,10 +25,10 @@ import app.platform.system.service.ISysConfigService;
 @Service
 public class SysConfigServiceImpl implements ISysConfigService
 {
-    @Autowired
+    @Resource
     private SysConfigMapper configMapper;
 
-    @Autowired
+    @Resource
     private RedisCache redisCache;
 
     /**

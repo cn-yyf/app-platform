@@ -1,7 +1,7 @@
 package app.platform.system.service.impl;
 
 import java.util.List;
-import org.springframework.beans.factory.annotation.Autowired;
+import jakarta.annotation.Resource;
 import org.springframework.stereotype.Service;
 import app.platform.common.constant.UserConstants;
 import app.platform.common.exception.ServiceException;
@@ -19,10 +19,10 @@ import app.platform.system.service.ISysPostService;
 @Service
 public class SysPostServiceImpl implements ISysPostService
 {
-    @Autowired
+    @Resource
     private SysPostMapper postMapper;
 
-    @Autowired
+    @Resource
     private SysUserPostMapper userPostMapper;
 
     /**

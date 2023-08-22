@@ -3,7 +3,7 @@ package app.platform.framework.web.service;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-import org.springframework.beans.factory.annotation.Autowired;
+import jakarta.annotation.Resource;
 import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
 import app.platform.common.core.domain.entity.SysRole;
@@ -19,10 +19,10 @@ import app.platform.system.service.ISysRoleService;
 @Component
 public class SysPermissionService
 {
-    @Autowired
+    @Resource
     private ISysRoleService roleService;
 
-    @Autowired
+    @Resource
     private ISysMenuService menuService;
 
     /**

@@ -6,7 +6,7 @@ import java.util.concurrent.TimeUnit;
 import jakarta.servlet.http.HttpServletRequest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
+import jakarta.annotation.Resource;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import app.platform.common.constant.CacheConstants;
@@ -51,7 +51,7 @@ public class TokenService
 
     private static final Long MILLIS_MINUTE_TEN = 20 * 60 * 1000L;
 
-    @Autowired
+    @Resource
     private RedisCache redisCache;
 
     /**

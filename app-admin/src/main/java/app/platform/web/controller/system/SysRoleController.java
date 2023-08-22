@@ -2,7 +2,7 @@ package app.platform.web.controller.system;
 
 import java.util.List;
 import jakarta.servlet.http.HttpServletResponse;
-import org.springframework.beans.factory.annotation.Autowired;
+import jakarta.annotation.Resource;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -40,19 +40,19 @@ import app.platform.system.service.ISysUserService;
 @RequestMapping("/system/role")
 public class SysRoleController extends BaseController
 {
-    @Autowired
+    @Resource
     private ISysRoleService roleService;
 
-    @Autowired
+    @Resource
     private TokenService tokenService;
 
-    @Autowired
+    @Resource
     private SysPermissionService permissionService;
 
-    @Autowired
+    @Resource
     private ISysUserService userService;
 
-    @Autowired
+    @Resource
     private ISysDeptService deptService;
 
     @PreAuthorize("@ss.hasPermi('system:role:list')")

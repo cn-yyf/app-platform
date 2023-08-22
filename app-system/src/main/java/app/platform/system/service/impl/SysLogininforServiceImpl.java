@@ -1,7 +1,7 @@
 package app.platform.system.service.impl;
 
 import java.util.List;
-import org.springframework.beans.factory.annotation.Autowired;
+import jakarta.annotation.Resource;
 import org.springframework.stereotype.Service;
 import app.platform.system.domain.SysLogininfor;
 import app.platform.system.mapper.SysLogininforMapper;
@@ -16,7 +16,7 @@ import app.platform.system.service.ISysLogininforService;
 public class SysLogininforServiceImpl implements ISysLogininforService
 {
 
-    @Autowired
+    @Resource
     private SysLogininforMapper logininforMapper;
 
     /**

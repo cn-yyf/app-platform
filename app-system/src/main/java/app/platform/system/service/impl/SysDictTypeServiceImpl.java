@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 import jakarta.annotation.PostConstruct;
-import org.springframework.beans.factory.annotation.Autowired;
+import jakarta.annotation.Resource;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import app.platform.common.constant.UserConstants;
@@ -26,10 +26,10 @@ import app.platform.system.service.ISysDictTypeService;
 @Service
 public class SysDictTypeServiceImpl implements ISysDictTypeService
 {
-    @Autowired
+    @Resource
     private SysDictTypeMapper dictTypeMapper;
 
-    @Autowired
+    @Resource
     private SysDictDataMapper dictDataMapper;
 
     /**

@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import jakarta.servlet.http.HttpServletRequest;
-import org.springframework.beans.factory.annotation.Autowired;
+import jakarta.annotation.Resource;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import com.alibaba.fastjson2.JSON;
@@ -33,7 +33,7 @@ public class SameUrlDataInterceptor extends RepeatSubmitInterceptor
     @Value("${token.header}")
     private String header;
 
-    @Autowired
+    @Resource
     private RedisCache redisCache;
 
     @SuppressWarnings("unchecked")

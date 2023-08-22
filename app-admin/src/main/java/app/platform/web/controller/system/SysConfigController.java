@@ -2,7 +2,7 @@ package app.platform.web.controller.system;
 
 import java.util.List;
 import jakarta.servlet.http.HttpServletResponse;
-import org.springframework.beans.factory.annotation.Autowired;
+import jakarta.annotation.Resource;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -31,7 +31,7 @@ import app.platform.system.service.ISysConfigService;
 @RequestMapping("/system/config")
 public class SysConfigController extends BaseController
 {
-    @Autowired
+    @Resource
     private ISysConfigService configService;
 
     /**

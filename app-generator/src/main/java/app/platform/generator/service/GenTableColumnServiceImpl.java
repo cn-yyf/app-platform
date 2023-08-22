@@ -1,7 +1,7 @@
 package app.platform.generator.service;
 
 import java.util.List;
-import org.springframework.beans.factory.annotation.Autowired;
+import jakarta.annotation.Resource;
 import org.springframework.stereotype.Service;
 import app.platform.common.core.text.Convert;
 import app.platform.generator.domain.GenTableColumn;
@@ -15,7 +15,7 @@ import app.platform.generator.mapper.GenTableColumnMapper;
 @Service
 public class GenTableColumnServiceImpl implements IGenTableColumnService 
 {
-	@Autowired
+	@Resource
 	private GenTableColumnMapper genTableColumnMapper;
 
 	/**

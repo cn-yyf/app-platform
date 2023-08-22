@@ -1,7 +1,7 @@
 package app.platform.system.service.impl;
 
 import java.util.List;
-import org.springframework.beans.factory.annotation.Autowired;
+import jakarta.annotation.Resource;
 import org.springframework.stereotype.Service;
 import app.platform.common.core.domain.entity.SysDictData;
 import app.platform.common.utils.DictUtils;
@@ -16,7 +16,7 @@ import app.platform.system.service.ISysDictDataService;
 @Service
 public class SysDictDataServiceImpl implements ISysDictDataService
 {
-    @Autowired
+    @Resource
     private SysDictDataMapper dictDataMapper;
 
     /**

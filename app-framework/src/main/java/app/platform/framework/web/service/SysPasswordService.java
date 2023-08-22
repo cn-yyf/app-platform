@@ -1,7 +1,7 @@
 package app.platform.framework.web.service;
 
 import java.util.concurrent.TimeUnit;
-import org.springframework.beans.factory.annotation.Autowired;
+import jakarta.annotation.Resource;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Component;
@@ -25,7 +25,7 @@ import app.platform.framework.security.context.AuthenticationContextHolder;
 @Component
 public class SysPasswordService
 {
-    @Autowired
+    @Resource
     private RedisCache redisCache;
 
     @Value(value = "${user.password.maxRetryCount}")

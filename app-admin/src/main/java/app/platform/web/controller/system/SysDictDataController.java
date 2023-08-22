@@ -3,7 +3,7 @@ package app.platform.web.controller.system;
 import java.util.ArrayList;
 import java.util.List;
 import jakarta.servlet.http.HttpServletResponse;
-import org.springframework.beans.factory.annotation.Autowired;
+import jakarta.annotation.Resource;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -34,10 +34,10 @@ import app.platform.system.service.ISysDictTypeService;
 @RequestMapping("/system/dict/data")
 public class SysDictDataController extends BaseController
 {
-    @Autowired
+    @Resource
     private ISysDictDataService dictDataService;
 
-    @Autowired
+    @Resource
     private ISysDictTypeService dictTypeService;
 
     @PreAuthorize("@ss.hasPermi('system:dict:list')")

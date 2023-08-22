@@ -1,6 +1,6 @@
 package app.platform.web.controller.system;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import jakarta.annotation.Resource;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -19,10 +19,10 @@ import app.platform.system.service.ISysConfigService;
 @RestController
 public class SysRegisterController extends BaseController
 {
-    @Autowired
+    @Resource
     private SysRegisterService registerService;
 
-    @Autowired
+    @Resource
     private ISysConfigService configService;
 
     @PostMapping("/register")

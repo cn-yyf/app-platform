@@ -3,7 +3,7 @@ package app.platform.quartz.controller;
 import java.util.List;
 import jakarta.servlet.http.HttpServletResponse;
 import org.quartz.SchedulerException;
-import org.springframework.beans.factory.annotation.Autowired;
+import jakarta.annotation.Resource;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -36,7 +36,7 @@ import app.platform.quartz.util.ScheduleUtils;
 @RequestMapping("/monitor/job")
 public class SysJobController extends BaseController
 {
-    @Autowired
+    @Resource
     private ISysJobService jobService;
 
     /**

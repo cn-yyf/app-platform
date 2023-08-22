@@ -1,6 +1,6 @@
 package app.platform.framework.web.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import jakarta.annotation.Resource;
 import org.springframework.stereotype.Component;
 import app.platform.common.constant.CacheConstants;
 import app.platform.common.constant.Constants;
@@ -26,13 +26,13 @@ import app.platform.system.service.ISysUserService;
 @Component
 public class SysRegisterService
 {
-    @Autowired
+    @Resource
     private ISysUserService userService;
 
-    @Autowired
+    @Resource
     private ISysConfigService configService;
 
-    @Autowired
+    @Resource
     private RedisCache redisCache;
 
     /**

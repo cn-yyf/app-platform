@@ -1,7 +1,7 @@
 package app.platform.system.service.impl;
 
 import java.util.List;
-import org.springframework.beans.factory.annotation.Autowired;
+import jakarta.annotation.Resource;
 import org.springframework.stereotype.Service;
 import app.platform.system.domain.SysNotice;
 import app.platform.system.mapper.SysNoticeMapper;
@@ -15,7 +15,7 @@ import app.platform.system.service.ISysNoticeService;
 @Service
 public class SysNoticeServiceImpl implements ISysNoticeService
 {
-    @Autowired
+    @Resource
     private SysNoticeMapper noticeMapper;
 
     /**
